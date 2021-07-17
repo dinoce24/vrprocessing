@@ -30,7 +30,7 @@ public class menucontrol : MonoBehaviour
         menucheck = "menu" + x.ToString() + "." + y.ToString() + "." + z.ToString();
         if (flag == false)
         {
-            resetmaterials();
+            Resetmaterials();
             GameObject.Find(optionalcheck).GetComponent<MeshRenderer>().material = check;
             flag = true;
         }
@@ -99,7 +99,7 @@ public class menucontrol : MonoBehaviour
             }
         flag = false;
     }
-    public void resetmaterials()
+    public void Resetmaterials()
     {
         optionals = GameObject.FindGameObjectsWithTag("optional");
         for (int i = 0; i < optionals.GetLength(0); i++)
